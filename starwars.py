@@ -58,13 +58,13 @@ class JediAnalyzer(JediValidator):
         """Processes and analyzes Jedi data."""
         characters = self.read_csv()
 
-        # Step 1: Validate names
+        # Validate names
         valid_names = self.validate_names(characters)
 
-        # Step 2: Validate lightsabers
+        # Validate lightsabers
         valid_jedi = self.validate_lightsabers(valid_names)
 
-        # Step 3: Generate homeworld stats
+        # Generate homeworld stats
         stats = self.homeworld_statistics(valid_jedi)
 
         # Save valid Jedi to the output file
